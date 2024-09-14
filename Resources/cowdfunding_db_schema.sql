@@ -52,13 +52,13 @@ CREATE TABLE IF NOT EXISTS public.contacts
     CONSTRAINT contacts_pkey PRIMARY KEY (contact_id)
 );
 
-DROP TABLE IF EXISTS public.sub_category;
+DROP TABLE IF EXISTS public.subcategory;
 
-CREATE TABLE IF NOT EXISTS public.sub_category
+CREATE TABLE IF NOT EXISTS public.subcategory
 (
     subcategory_id character varying COLLATE pg_catalog."default" NOT NULL,
-    subcategory character varying[] COLLATE pg_catalog."default" NOT NULL,
-    CONSTRAINT sub_category_pkey PRIMARY KEY (subcategory_id)
+    subcategory character varying COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT subcategory_pkey PRIMARY KEY (subcategory_id)
 );
 
 ALTER TABLE IF EXISTS public.campaign
@@ -78,8 +78,8 @@ ALTER TABLE IF EXISTS public.campaign
 
 
 ALTER TABLE IF EXISTS public.campaign
-    ADD CONSTRAINT campaign_sub_category_fkey FOREIGN KEY (subcategory_id)
-    REFERENCES public.sub_category (subcategory_id) MATCH SIMPLE
+    ADD CONSTRAINT campaign_subcategory_fkey FOREIGN KEY (subcategory_id)
+    REFERENCES public.subcategory (subcategory_id) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
