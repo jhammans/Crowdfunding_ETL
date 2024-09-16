@@ -1,0 +1,14 @@
+{
+    "postgres_connection": {
+        "user": "postgres",
+        "password": "postgres"
+    },
+    "mongodb_cluster": {
+        "user": "bosebonyshree",
+        "password": "Datastructure24"
+    },
+    "mongodb_local": {
+        "user": "",
+        "password": ""
+    }
+}
