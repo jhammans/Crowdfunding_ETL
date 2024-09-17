@@ -38,10 +38,6 @@ CROWDFUNDING_ETL/
 ├── Starter_Files/                            # Jupyter notebooks for data indivdual notebooks     
 ├── utils/                                    # utilities needed for the program              
 └── ETL_Mini_Project_BBose_JHammans.ipynb     # main notebook of the project
-└── data_dictionary.xlsx                      # layout of input files
-└── data Stormers Presentaion                 # powerpoint of the project
-└── config.template.json                      # json files for configurations
-└── tornado_heatmap.html                      # ineractive heat_map graph
 └── README.md                                 # Project README file
 ```
 
