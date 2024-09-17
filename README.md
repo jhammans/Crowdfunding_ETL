@@ -66,7 +66,7 @@ Save credentials for your Postgres and MongoDB instances
 ```bash
 1. Copy `config.template.json` to `config.json`.
 2. Edit `config.json` and add your actual credentials.
-3. Ensure `config.json` is not added to version control by checking that it's listed in `.gitignore`.
+3. Ensure `config.json` is not added to version control by checking that it'''s listed in `.gitignore`.
 ```
 
 ### Step 3: Installing Dependencies
