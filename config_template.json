@@ -5,7 +5,8 @@
     },
     "mongodb_cluster": {
         "user": "YOUR_USER_ID_HERE",
-        "password": "YOUR_PASSWORD_HERE"
+        "password": "YOUR_PASSWORD_HERE",
+        "server": "YOUR_SERVER_HERE"
     },
     "mongodb_local": {
         "user": "YOUR_USER_ID_HERE",
