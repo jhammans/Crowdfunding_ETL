@@ -1,8 +1,13 @@
+BEGIN;
+
+
 ALTER TABLE IF EXISTS public.campaign DROP CONSTRAINT IF EXISTS campaign_category_fkey;
 
 ALTER TABLE IF EXISTS public.campaign DROP CONSTRAINT IF EXISTS campaign_contacts_fkey;
 
 ALTER TABLE IF EXISTS public.campaign DROP CONSTRAINT IF EXISTS campaign_sub_category_fkey;
+
+
 
 DROP TABLE IF EXISTS public.campaign;
 
@@ -11,7 +16,7 @@ CREATE TABLE IF NOT EXISTS public.campaign
     cf_id integer NOT NULL,
     contact_id integer NOT NULL,
     company_name character varying COLLATE pg_catalog."default",
-    blurb character varying COLLATE pg_catalog."default",
+    description character varying COLLATE pg_catalog."default",
     goal numeric,
     pledged numeric,
     outcome character varying COLLATE pg_catalog."default",
@@ -76,3 +81,5 @@ ALTER TABLE IF EXISTS public.campaign
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
+
+END;
