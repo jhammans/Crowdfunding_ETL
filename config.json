@@ -5,7 +5,8 @@
     },
     "mongodb_cluster": {
         "user": "bosebonyshree",
-        "password": "Datastructure24"
+        "password": "Datastructure24",
+		"server": "datafirst.8afvk.mongodb.net"
     },
     "mongodb_local": {
         "user": "",

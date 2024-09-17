@@ -25,8 +25,6 @@ CREATE TABLE IF NOT EXISTS public.campaign
     currency character varying COLLATE pg_catalog."default",
     launch_date timestamp with time zone,
     end_date timestamp with time zone,
-	staff_pick BOOLEAN,
-	spotlight BOOLEAN,
     category_id character varying COLLATE pg_catalog."default" NOT NULL,
     subcategory_id character varying COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT campaign_pkey PRIMARY KEY (cf_id)
