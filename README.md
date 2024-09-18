@@ -34,10 +34,15 @@ This project focuses on building an ETL (Extract, Transform, Load) pipeline usin
 The repository is organized as follows:
 ```bash
 CROWDFUNDING_ETL/
-├── Resources/                                # Raw and processed data files     
-├── Starter_Files/                            # Jupyter notebooks for data indivdual notebooks     
-├── utils/                                    # utilities needed for the program              
-└── ETL_Mini_Project_BBose_JHammans.ipynb     # main notebook of the project
+└── Resources/                                # Raw and processed data files
+ └── create_crowdfunding_db.sql               # Sql script used to create Postgres database
+ └── crowdfunding_db_erd.png                  # Entity Relationship Diagram (ERD)
+ └── crowdfunding_db_schema.sql               # Sql script containing DDL to create tables and other database objects
+└── Starter_Files/                            # Jupyter notebooks for data indivdual notebooks     
+└── utils/                                    # Utilities needed for the program              
+└── ETL_Mini_Project_BBose_JHammans.ipynb     # Main notebook of the project
+└── mongodb_load_databases.ipynb              # Notebook called by the main notebook to load output csv files to MongoDB
+└── postgres_load_databases.ipynb             # Notebook called by the main notebook to load output csv files to Postgres
 └── README.md                                 # Project README file
 ```
 
@@ -74,36 +79,11 @@ Save credentials for your Postgres and MongoDB instances
 Make sure you have the required Python libraries installed. You can install them using `pip`:
 
 ```bash
-pip install pymongo pandas sqlalchemy
+pip install pymongo pandas sqlalchemy import_ipynb
 ```
 
 ### Step 4: Running the Notebooks
 
-- Open the `ETL_Mini_Project_BBose_JHammans.ipynb` notebook to set up the MongoDB connection, load the data, and perform necessary updates.
-- Open the `NoSQL_analysis_starter.ipynb` notebook to perform the exploratory data analysis.
+- Open `ETL_Mini_Project_BBose_JHammans.ipynb` this the main notebook.  It reads in the source data, cleans it and outputs 4 csv files.  It then calls `postgres_load_databases.ipynb` which connects to Postgres and creates the database and all the objects needed for the csv files to be loaded to.  `mongodb_load_databases.ipynb` is then called to load the csv files into collections in MongoDB. 
 
 ---
-
-## Database Setup
-
-Database configuration steps:
-
-1. **Postgres**:  
-
-
-2. **MongoDB**:  
-
-
----
-
-## Exploratory Data Analysis
-
-What did we find interesting in the data
-
----
-
-## Example Results
-
-Here is an example of one of the visualizations:
-
-visual.png
