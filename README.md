@@ -39,7 +39,8 @@ CROWDFUNDING_ETL/
  └── crowdfunding_db_erd.png                  # Entity Relationship Diagram (ERD)
  └── crowdfunding_db_schema.sql               # Sql script containing DDL to create tables and other database objects
 └── Starter_Files/                            # Jupyter notebooks for data indivdual notebooks     
-└── utils/                                    # Utilities needed for the program              
+└── utils/                                    # Utilities needed for the program 
+└── data_visualization.ipynb                  # Notebook called by the main notebook to generate visualizations from MongoDB
 └── ETL_Mini_Project_BBose_JHammans.ipynb     # Main notebook of the project
 └── mongodb_load_databases.ipynb              # Notebook called by the main notebook to load output csv files to MongoDB
 └── postgres_load_databases.ipynb             # Notebook called by the main notebook to load output csv files to Postgres
@@ -71,7 +72,7 @@ Save credentials for your Postgres and MongoDB instances
 ```bash
 1. Copy `config.template.json` to `config.json`.
 2. Edit `config.json` and add your actual credentials.
-3. Ensure `config.json` is not added to version control by checking that it'''s listed in `.gitignore`.
+3. Ensure `config.json` is not added to version control by checking that it is listed in `.gitignore`.
 ```
 
 ### Step 3: Installing Dependencies
@@ -84,6 +85,6 @@ pip install pymongo pandas sqlalchemy import_ipynb
 
 ### Step 4: Running the Notebooks
 
-- Open `ETL_Mini_Project_BBose_JHammans.ipynb` this the main notebook.  It reads in the source data, cleans it and outputs 4 csv files.  It then calls `postgres_load_databases.ipynb` which connects to Postgres and creates the database and all the objects needed for the csv files to be loaded to.  `mongodb_load_databases.ipynb` is then called to load the csv files into collections in MongoDB. 
+- Open `ETL_Mini_Project_BBose_JHammans.ipynb` this the main notebook.  It reads in the source data, cleans it and outputs 4 csv files.  It then calls `postgres_load_databases.ipynb` which connects to Postgres and creates the database and all the objects needed for the csv files to be loaded to.  `mongodb_load_databases.ipynb` is then called to load the csv files into collections in MongoDB. Finally, `data_visualization.ipynb` is called to generate the visualizations which sources the data from the MongoDB database.
 
 ---
